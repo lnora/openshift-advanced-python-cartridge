@@ -112,10 +112,10 @@ function tidy() {
 function build_server() {
     case "$OPENSHIFT_PYTHON_SERVER" in
         gevent)
-            pip install gevent
+            pip install --no-cache-dir gevent
             ;;
         gunicorn)
-            pip install gevent gunicorn
+            pip install --no-cache-dir gevent gunicorn
             ;;
     esac
 
@@ -150,7 +150,7 @@ function build() {
 
     if [ -f ${OPENSHIFT_REPO_DIR}/requirements.txt ]
     then
-        ( cd $OPENSHIFT_REPO_DIR; pip install -r ${OPENSHIFT_REPO_DIR}/requirements.txt $OPENSHIFT_PYTHON_MIRROR )
+        ( cd $OPENSHIFT_REPO_DIR; pip install --no-cache-dir -r ${OPENSHIFT_REPO_DIR}/requirements.txt $OPENSHIFT_PYTHON_MIRROR )
     fi
 
     if [ -f ${OPENSHIFT_REPO_DIR}/setup.py ]
