@@ -1,6 +1,7 @@
 import os
 from gevent import socket
 from gevent.pywsgi import WSGIServer
+from geventwebsocket.handler import WebSocketHandler
 
 import app
 
@@ -10,4 +11,4 @@ sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
 sock.bind(sock_path)
 sock.listen(256)
 
-WSGIServer(sock, app.application).serve_forever()
+WSGIServer(sock, app.application, handler_class=WebSocketHandler).serve_forever()
