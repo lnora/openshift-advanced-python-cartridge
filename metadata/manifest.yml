@@ -1,12 +1,12 @@
 Name: advanced-python
 Cartridge-Short-Name: ADVANCED_PYTHON
-Display-Name: Advanced Python 2.7
+Display-Name: Advanced Python 3.3
 Description: 'An advanced python cartridge utilising an Nginx reverse proxy and a choice of modern WSGI servers such as gevent or gunicorn'
-Version: '2.7'
+Version: '3.3'
 Versions:
 - '2.7'
 - '3.3'
-License: The Python License, version 2.7
+License: The Python License, version 3.3
 License-Url: http://docs.python.org/3/license.html
 Vendor: python.org
 Cartridge-Version: 0.0.1
@@ -19,9 +19,9 @@ Website: http://www.python.org
 Help-Topics:
   Developer Center: https://www.openshift.com/developers
 Provides:
-- python-2.7
+- python-3.3
 - python
-- python(version) = 2.7
+- python(version) = 3.3
 Publishes: 
 Subscribes:
   set-env:
